@@ -14,7 +14,9 @@ end sub3;
 architecture arch_1 of sub3 is
 begin
 
-    -- unsigned = número sem sinal
-    o_s <= std_logic_vector(unsigned(i_a) + unsigned(not i_b));
+    -- Subtração usando complemento de dois
+    o_s <= std_logic_vector(
+        unsigned(i_a) - unsigned(i_b)
+    );
 
 end arch_1;
